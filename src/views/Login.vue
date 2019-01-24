@@ -1,16 +1,16 @@
 <template id="login-form">
   <div class="login-wrapper">
     <div class="login-left">
-      <img height="100" src="https://wisk.s3.amazonaws.com/assets/vms/images/wisk-logo-black.png" srcr="https://preview.ibb.co/hUAr57/bar_bg.jpg">
+      <img height="400" src="https://www.easyglasssplashbacks.co.uk/wp-content/uploads/product_images/printed-watercolour-glass-splashback-pink-tree.png">
     </div>
-    <form class="login-right" @submit.prevent>
+    <form class="login-right" action="https://en.wikipedia.org/wiki">
       <div class="h2">Login</div>
       <div class="form-group">
-        <input type="text" id="username" placeholder="Username" v-model="username">
+        <input type="text" id="username" placeholder="Username" v-model="username" required>
         <label for="username">Username</label>    
       </div>
       <div class="form-group">
-        <input type="password" id="Password" placeholder="Password" v-model="password">
+        <input type="password" id="Password" placeholder="Password" v-model="password" required>
         <label for="Password">Password</label>    
       </div>
       <div class="checkbox-container">
@@ -18,7 +18,7 @@
         <div class="text-checkbox">Remember me</div>
       </div> 
       <div class="button-area">
-        <button class="btn btn-primary pull-right" @click="login()" >Login</button>
+        <button role="submit" class="btn btn-primary pull-right"  >Login</button>
       </div>
     </form>
   </div>
@@ -190,7 +190,7 @@ input:placeholder-shown + label {
 .login-wrapper {
   height: 440px;
   background-color: #fff;
-  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.2);*/
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -226,7 +226,7 @@ input:placeholder-shown + label {
   padding: 40px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 200px;
   width: 400px;
   -webkit-transform: translateX(400px) translateZ(0);
   transform: translateX(400px) translateZ(0);
@@ -300,7 +300,7 @@ input[type="checkbox"]:checked:after {
 
 .button-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 30px;
 }
 
@@ -311,12 +311,11 @@ input[type="checkbox"]:checked:after {
   background-color: transparent;
   border: none;
   border-radius: 2px;
-  height: 40px;
+  height: 24px;
   display: flex;
-  padding: 0 35px;
+  padding: 0 24px;
   cursor: pointer;
   font-size: 16px;
-  text-transform: uppercase;
   letter-spacing: -0.00933333em;
 }
 
