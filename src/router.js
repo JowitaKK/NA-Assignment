@@ -28,5 +28,10 @@ export default new Router({
       name: 'signup',
       component: () => import(/* webpackChunkName: "about" */ './views/Signup.vue')
     },
+    {
+      path: '/sketchboard',
+      name: 'about',
+      component: () => import(/* webpackChunkName: "about" */ './views/Sketchboard.vue')
+    },
   ]
 })

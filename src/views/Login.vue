@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col">
-				<img height="400" src="../assets/printed-watercolour-glass-splashback-pink-tree.png">
+				<img height="400" src="../assets/logo.png">
 			</div>
 
 			<div class="col">
@@ -29,6 +29,6 @@
 <style type="text/css">
 	#login-btn{
 		padding-top: 0px;
-    	padding-bottom: 0px;
+    padding-bottom: 0px;
 	}
 </style>

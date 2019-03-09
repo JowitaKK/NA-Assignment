@@ -1,5 +1,9 @@
 # na-assignment
 
+## Color Theme:
+https://material.io/tools/color/#!/?view.left=0&view.right=0&secondary.color=1adda4&primary.color=1ddced
+
+
 ## Project setup
 ```
 npm install
