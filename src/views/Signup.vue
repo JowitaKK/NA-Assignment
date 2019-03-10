@@ -37,6 +37,6 @@
 <style type="text/css">
   #signup-btn{
     padding-top: 0px;
-      padding-bottom: 0px;
+    padding-bottom: 0px;
   }
 </style>

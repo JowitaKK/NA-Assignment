@@ -27,8 +27,8 @@
 </template>
 
 <style type="text/css">
-	#login-btn{
-		padding-top: 0px;
-    padding-bottom: 0px;
-	}
+#login-btn{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
 </style>

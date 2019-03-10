@@ -25,7 +25,6 @@
     flex-direction: column;
     height: 100%;
     min-width: 330px;
-    margin-left: 16px;
     padding: 8px;
   }
   .contact{

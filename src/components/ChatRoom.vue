@@ -37,8 +37,8 @@
 
 <style>
 .chatbox {
-  width: 500px;
-  height: 600px;
+  width: 450px;
+  height: 500px;
   background: #f1f1f1;
   padding: 16px;
   position: fixed;
@@ -55,7 +55,7 @@
 .chatlogs {
   padding: 10px;
   width: 100%;
-  height: 450px;
+  height: 350px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -66,8 +66,8 @@
   align-items: flex-start;
 }
 .chat .user-photo {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: #ccc;
   border-radius: 50%;
   overflow: hidden;
@@ -76,11 +76,11 @@
   width: 100%;
 }
 .chat .chat-message {
-  width: 326px;
+  width: 300px;
   padding: 15px;
   margin: 5px 10px 0;
   border-radius: 10px;
-  color: #fff;
+  color: black;
   font-size: 18px;
 }
 .friend .chat-message {
@@ -105,7 +105,7 @@
   resize: none;
   padding: 10px;
   font-size: 18px;
-  color: #333;
+  color: black;
 }
 .chat-form textarea:forcus {
   background: #fff;
@@ -113,7 +113,7 @@
 .chat-form button {
   background: #1ddced;
   padding: 5px 15px;
-  color: #fff;
+  color: black;
   border: none;
   margin: 0 10px;
   border-radius: 3px;

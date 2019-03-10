@@ -5,7 +5,7 @@
     </a>
     <ul class="nav-links left-nav">
       <li class="nav-item default-border-radius"><a href="/sketchboard">
-        <i class="fab fa-sketch"></i> Sketchboard</a>
+        <i class="fas fa-pencil-alt"></i> Sketchboard</a>
       </li>
     </ul>
     <ul class="nav-links right-nav">
