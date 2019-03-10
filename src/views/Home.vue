@@ -24,10 +24,12 @@
 	flex-direction: column;
 }
 .main-area{
+	margin-top: 56px;
 	flex-grow: 1;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	background-color: #e9ebee;
 
 }
 .feed-area{

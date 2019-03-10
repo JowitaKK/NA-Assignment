@@ -26,6 +26,8 @@
     height: 100%;
     min-width: 330px;
     padding: 8px;
+    position: fixed;
+    right: 0px;
   }
   .contact{
     margin-bottom: 8px;

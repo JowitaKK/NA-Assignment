@@ -20,7 +20,7 @@
     margin-bottom: 16px;
     background-color: #f1f1f1;
     display: flex;
-    /* justify-content: space-between; */
+    position: fixed;
     align-items: center;
   }
 

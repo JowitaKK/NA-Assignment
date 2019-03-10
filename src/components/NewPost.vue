@@ -1,7 +1,7 @@
 <template>
-  <div class="new-post default-shadow default-border default-border-radius">
+  <div class="new-post default-border default-shadow">
     <div class="new-post-header grey-bg">
-      <h3>New Post</h3>
+      <h4>New Post</h4>
     </div>
     <div class="new-post-content">
       <textarea name="post-text" id="post-text" cols="30" rows="5"> Watch and enjoy:)</textarea>
@@ -17,11 +17,12 @@
 
 <style>
 .new-post{
-  width: 70%;
+  min-width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
-.new-post-header h3{
+.new-post-header h4{
+  text-align: center;
   margin-bottom: 0px;
 }
 .new-post-content{
@@ -37,10 +38,11 @@
   height: 128px;
 }
 #add-post{
+  font-size: 12px;
   padding: 6px 14px;
 }
 .icon {
-  font-size: 45px;
+  font-size: 30px;
   padding: 16px;
 }
 </style>
