@@ -1,31 +1,30 @@
 <template>
   <div class="chatbox default-shadow" v-if="username">
-    <div class="chatbox-header"> 
-      <h6>{{ username }} </h6> 
-      <i class="fas fa-times close-icon" @click="finishChat"></i> 
+    <div class="chatbox-header">
+      <h6>{{ username }}</h6>
+      <i class="fas fa-times close-icon" @click="finishChat"></i>
     </div>
     <div class="chatlogs">
 
-      <div class="chat friend">
-        <div class="user-photo">
-          <img height="60" src="../assets/lorenzo-james.png">
+      <!--
+        Using hardcoded img, replace with serverside url 
+        https://github.com/vuejs-templates/webpack/issues/450
+       -->
+      <template v-for="m in messages">
+        <div :key="m.id" class="chat friend" v-if="m.from !== settings.me">
+          <div class="user-photo">
+            <img height="60" :src="require(`@/assets/${friends.friends[m.from].avatar}`)">
+          </div>
+          <p class="chat-message secondary-bg">{{m.message}}</p>
         </div>
-        <p class="chat-message secondary-bg">Hi! How are You?</p>
-      </div>
 
-      <div class="chat self">
-        <div class="user-photo">
-          <img height="60" src="../assets/emanuele-de-pellegrin.png">
+        <div :key="m.id" class="chat self" v-if="m.from === settings.me">
+          <div class="user-photo">
+            <img height="60" :src="require(`@/assets/${settings.avatar}`)">
+          </div>
+          <p class="chat-message primary-bg">{{m.message}}</p>
         </div>
-        <p class="chat-message primary-bg">Whats up!!</p>
-      </div>
-
-      <div class="chat friend">
-        <div class="user-photo">
-          <img height="60" src="../assets/lorenzo-james.png">
-        </div>
-        <p class="chat-message secondary-bg">Its very late I want to go hom!!</p>
-      </div>
+      </template>
     </div>
 
     <div class="chat-form">
@@ -45,11 +44,11 @@
   right: 362px;
   bottom: 0px;
 }
-.chatbox-header{
+.chatbox-header {
   display: flex;
   justify-content: space-between;
 }
-.close-icon{
+.close-icon {
   cursor: pointer;
 }
 .chatlogs {
@@ -122,24 +121,29 @@
 </style>
 
 <script>
-import ChatStore from '../store/ChatStore';
-import FriendsStore from '../store/FriendsStore';
+import ChatStore from "../store/ChatStore";
+import FriendsStore from "../store/FriendsStore";
+import SettingsStore from "../store/SettingsStore";
 
 export default {
   name: "chat-room",
-    data: function (){
+  data: function() {
     return {
       chat: ChatStore.state,
-      friends: FriendsStore.store,
+      settings: SettingsStore.state,
+      friends: FriendsStore.state,
     };
-  }, 
+  },
   computed: {
-    username: function(){
-      return this.chat.username
-    }
-  }, 
+    username: function() {
+      return this.chat.username;
+    },
+    messages: function() {
+      return this.chat.messages;
+    },
+  },
   methods: {
-    finishChat: function(){
+    finishChat: function() {
       ChatStore.finishChat();
     }
   }
