@@ -29,6 +29,11 @@
     position: fixed;
     right: 0px;
   }
+  @media screen and (max-width: 1700px) {
+    .contact-list {
+      display: none !important;
+    }
+  }
   .contact{
     margin-bottom: 8px;
     display: flex;
@@ -49,6 +54,7 @@
   .user-photo img {
     border-radius: 30px;  
   }
+
 </style>
 
 <script>

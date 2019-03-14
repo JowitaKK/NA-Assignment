@@ -1,5 +1,5 @@
 <template>
-  <div class="chatbox default-shadow" v-if="username">
+  <div class="chatbox default-border default-shadow" v-if="username">
     <div class="chatbox-header">
       <h6>{{ username }}</h6>
       <i class="fas fa-times close-icon" @click="finishChat"></i>
@@ -44,6 +44,12 @@
   right: 362px;
   bottom: 0px;
 }
+
+@media screen and (max-width: 1700px) {
+  .chatbox {
+    right: 16px;
+  }
+}
 .chatbox-header {
   display: flex;
   justify-content: space-between;
@@ -83,11 +89,9 @@
   font-size: 18px;
 }
 .friend .chat-message {
-  /* background: #1adda4; */
+  order: 0;
 }
-
 .self .chat-message {
-  /* background: #1ddced; */
   order: -1;
 }
 .chat-form {
@@ -98,7 +102,6 @@
 .chat-form textarea {
   background: #fbfbfb;
   width: 75%;
-  height: 50px;
   border: 2px solid #eee;
   border-radius: 3px;
   resize: none;
@@ -111,7 +114,7 @@
 }
 .chat-form button {
   background: #1ddced;
-  padding: 5px 15px;
+  padding: 10px 22px;
   color: black;
   border: none;
   margin: 0 10px;

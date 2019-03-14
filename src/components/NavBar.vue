@@ -4,8 +4,8 @@
       <img height="40" src="../assets/logo.png" alt="warriors logo"> <h3>Warriors</h3>
     </a>
     <ul class="nav-links left-nav">
-      <li class="nav-item default-border-radius"><a href="/sketchboard">
-        <i class="fas fa-pencil-alt"></i> Sketchboard</a>
+      <li class="nav-item" @click="toggleSketchboard()">
+        <i class="fas fa-pencil-alt"></i> Sketchboard
       </li>
     </ul>
     <ul class="nav-links right-nav">
@@ -40,6 +40,9 @@
   .right-nav{
     margin-left: auto;
   }
+  .nav-item{
+    cursor: pointer;
+  }
   .nav-item a {
     display: inline-block;
     padding: 6px 14px;
@@ -63,7 +66,25 @@
 
 
 <script>
+import Sketchboard from "../store/SketchboardStore";
+
 export default {
-  name: "nav-bar"
+  name: "nav-bar",
+  data: () => {
+    return {
+      privateState: {},
+      sketchboard: Sketchboard.state
+    };
+  }, 
+  computed: {
+    isSketchboardOpen: function() {
+      return this.sketchboard.isOpen;
+    },
+  },
+  methods: {
+    toggleSketchboard: function(){
+      Sketchboard.toggle();
+    }
+  }
 }
 </script>
