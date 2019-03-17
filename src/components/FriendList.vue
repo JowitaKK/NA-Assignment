@@ -70,7 +70,6 @@ export default {
   }, 
   methods: {
     startChat: function(username){
-      ChatStore.loadMessages(username);
       ChatStore.startChat(username);
     }
   }

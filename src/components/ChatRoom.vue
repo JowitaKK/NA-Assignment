@@ -1,7 +1,7 @@
 <template>
-  <div class="chatbox default-border default-shadow" v-if="username">
+  <div class="chatbox default-border default-shadow" v-if="users">
     <div class="chatbox-header">
-      <h6>{{ username }}</h6>
+      <h6>{{ users.join(",") }}</h6>
       <i class="fas fa-times close-icon" @click="finishChat"></i>
     </div>
     <div class="chatlogs">
@@ -36,13 +36,14 @@
 
 <style>
 .chatbox {
+  display: flex;
+  flex-direction: column;
   width: 450px;
-  height: 500px;
+  height: 100%;
   background: #f1f1f1;
   padding: 16px;
   position: fixed;
   right: 362px;
-  bottom: 0px;
 }
 
 @media screen and (max-width: 1700px) {
@@ -58,9 +59,7 @@
   cursor: pointer;
 }
 .chatlogs {
-  padding: 10px;
-  width: 100%;
-  height: 350px;
+  height: calc(100% - 180px);
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -105,7 +104,7 @@
   border: 2px solid #eee;
   border-radius: 3px;
   resize: none;
-  padding: 10px;
+  padding: 2px;
   font-size: 18px;
   color: black;
 }
@@ -114,10 +113,10 @@
 }
 .chat-form button {
   background: #1ddced;
-  padding: 10px 22px;
+  padding: 8px 18px;
   color: black;
   border: none;
-  margin: 0 10px;
+  margin: 10px;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -138,8 +137,8 @@ export default {
     };
   },
   computed: {
-    username: function() {
-      return this.chat.username;
+    users: function() {
+      return this.chat.users;
     },
     messages: function() {
       return this.chat.messages;
