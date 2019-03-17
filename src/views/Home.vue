@@ -4,6 +4,7 @@
 		
 		<div class="main-area">
 			<div class="feed-area">
+				<sketchboard/>
 				<new-post/>
 				<feed />
 			</div>
@@ -51,6 +52,7 @@
 	import NavBar from '../components/NavBar';
 	import FriendList from '../components/FriendList'
 	import Feed from '../components/Feed';
+	import Sketchboard from '../components/Sketchboard';
 
 	export default {
 		name: 'home',
@@ -60,6 +62,7 @@
 			NavBar,
 			FriendList,
 			Feed,
+			Sketchboard,
 		}
 	}
 </script>

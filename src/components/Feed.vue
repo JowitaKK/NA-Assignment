@@ -106,6 +106,18 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+@media screen and (max-width: 1200px) {
+  .feed {
+    max-width: 70%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .feed {
+    max-width: 80%;
+  }
+}
+
 .post-divider {
   width: 32px;
 }
@@ -114,7 +126,7 @@
   margin-bottom: 16px;
   flex-basis: 100%;
   box-sizing: border-box;
-	background-color: white;
+  background-color: white;
 }
 .post-author-avatar {
   padding: 4px;
@@ -128,9 +140,8 @@
 .post-media img {
   width: 100%;
 }
-
-.card {
-  margin-bottom: 16px;
+.post-text{
+  padding: 8px;
 }
 </style>
 

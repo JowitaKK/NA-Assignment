@@ -1,12 +1,12 @@
 <template>
   <div class="new-post default-border default-shadow">
-    <div class="new-post-header grey-bg">
+    <div class="new-post-header">
       <h4>New Post</h4>
     </div>
     <div class="new-post-content">
       <textarea name="post-text" id="post-text" cols="30" rows="5"> Watch and enjoy:)</textarea>
     </div> 
-    <div class="new-post-actions grey-bg">
+    <div class="new-post-actions">
       <i class="far fa-file-alt icon"></i>
       <i class="far fa-images icon"></i>
       <i class="far fa-file-video icon"></i>
@@ -20,6 +20,16 @@
   min-width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (max-width: 1200px) {
+  .new-post {
+    min-width: 70%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .new-post {
+    min-width: 80%;
+  }
 }
 .new-post-header h4{
   text-align: center;
