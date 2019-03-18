@@ -3,7 +3,7 @@
     <div class="post default-border default-shadow">
       <div class="post-author">
         <div class="post-author-avatar">
-          <img height="60" src="../assets/lorenzo-james.png"> Lorenzo James
+          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
         </div>
       </div>
       <div class="post-media">
@@ -19,7 +19,7 @@
     <div class="post default-border default-shadow">
       <div class="post-author">
         <div class="post-author-avatar">
-          <img height="60" src="../assets/lorenzo-james.png"> Lorenzo James
+          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
         </div>
       </div>
       <div class="post-media">
@@ -33,7 +33,7 @@
     <div class="post default-border default-shadow">
       <div class="post-author">
         <div class="post-author-avatar">
-          <img height="60" src="../assets/lorenzo-james.png"> Lorenzo James
+          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
         </div>
       </div>
       <div class="post-media">
@@ -49,7 +49,7 @@
     <div class="post default-border default-shadow">
       <div class="post-author">
         <div class="post-author-avatar">
-          <img height="60" src="../assets/lorenzo-james.png"> Lorenzo James
+          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
         </div>
       </div>
       <div class="post-media">
@@ -65,7 +65,7 @@
     <div class="post default-border default-shadow">
       <div class="post-author">
         <div class="post-author-avatar">
-          <img height="60" src="../assets/lorenzo-james.png"> Lorenzo James
+          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
         </div>
       </div>
       <div class="post-media">
@@ -81,7 +81,7 @@
     <div class="post default-border default-shadow">
       <div class="post-author">
         <div class="post-author-avatar">
-          <img height="60" src="../assets/lorenzo-james.png"> Lorenzo James
+          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
         </div>
       </div>
       <div class="post-media">

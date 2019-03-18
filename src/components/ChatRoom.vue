@@ -13,14 +13,14 @@
       <template v-for="m in messages">
         <div :key="m.id" class="chat friend" v-if="m.from !== settings.me">
           <div class="user-photo">
-            <img height="60" :src="require(`@/assets/${friends.friends[m.from].avatar}`)">
+            <img height="60" alt="friend avatar" :src="require(`@/assets/${friends.friends[m.from].avatar}`)">
           </div>
           <p class="chat-message secondary-bg">{{m.message}}</p>
         </div>
 
         <div :key="m.id" class="chat self" v-if="m.from === settings.me">
           <div class="user-photo">
-            <img height="60" :src="require(`@/assets/${settings.avatar}`)">
+            <img height="60" alt="me avatar" :src="require(`@/assets/${settings.avatar}`)">
           </div>
           <p class="chat-message primary-bg">{{m.message}}</p>
         </div>
@@ -108,7 +108,7 @@
   font-size: 18px;
   color: black;
 }
-.chat-form textarea:forcus {
+.chat-form textarea:focus {
   background: #fff;
 }
 .chat-form button {

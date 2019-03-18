@@ -17,7 +17,7 @@
 	</div>
 </template>
 
-<style type="text/css">
+<style>
 .container-main{
 	width: 100%;
 	height: 100%;
