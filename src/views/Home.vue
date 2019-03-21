@@ -10,7 +10,7 @@
       </div>
 
       <div class="contacts">
-        <friend-list/>
+        <chat/>
         <chat-room/>
       </div>
     </div>
@@ -45,20 +45,18 @@
 </style>
 
 <script>
-import ChatRoom from "../components/ChatRoom";
 import NewPost from "../components/NewPost";
 import NavBar from "../components/NavBar";
-import FriendList from "../components/FriendList";
+import Chat from "../components/Chat";
 import Feed from "../components/Feed";
 import Sketchboard from "../components/Sketchboard";
 
 export default {
   name: "home",
   components: {
-    ChatRoom,
     NewPost,
     NavBar,
-    FriendList,
+    Chat,
     Feed,
     Sketchboard
   }
