@@ -15,92 +15,14 @@
         <p class="post-text">Very useful.</p>
       </div>
     </div>
-
-    <div class="post default-border default-shadow">
-      <div class="post-author">
-        <div class="post-author-avatar">
-          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
-        </div>
-      </div>
-      <div class="post-media">
-        <img src="../assets/img/funny1.jpeg">
-      </div>
-      <div class="post-body">
-        <p class="post-text">Very useful.</p>
-      </div>
-    </div>
-
-    <div class="post default-border default-shadow">
-      <div class="post-author">
-        <div class="post-author-avatar">
-          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
-        </div>
-      </div>
-      <div class="post-media">
-        <video controls>
-          <source src="../assets/video/insulin.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="post-body">
-        <p class="post-text">Very useful.</p>
-      </div>
-    </div>
-
-    <div class="post default-border default-shadow">
-      <div class="post-author">
-        <div class="post-author-avatar">
-          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
-        </div>
-      </div>
-      <div class="post-media">
-        <video controls>
-          <source src="../assets/video/insulin.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="post-body">
-        <p class="post-text">Very useful.</p>
-      </div>
-    </div>
-
-    <div class="post default-border default-shadow">
-      <div class="post-author">
-        <div class="post-author-avatar">
-          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
-        </div>
-      </div>
-      <div class="post-media">
-        <video controls>
-          <source src="../assets/video/insulin.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="post-body">
-        <p class="post-text">Very useful.</p>
-      </div>
-    </div>
-
-    <div class="post default-border default-shadow">
-      <div class="post-author">
-        <div class="post-author-avatar">
-          <img height="60" alt="post author avatar" src="../assets/lorenzo-james.png"> Lorenzo James
-        </div>
-      </div>
-      <div class="post-media">
-        <video controls>
-          <source src="../assets/video/insulin.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="post-body">
-        <p class="post-text">Very useful.</p>
-      </div>
-    </div>
   </div>
 </template>
 
 
 <style>
 .feed {
-  max-width: 60%;
-  margin-left: auto;
+  max-width: 50%;
+  margin-left: 3%;
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
@@ -140,7 +62,7 @@
 .post-media img {
   width: 100%;
 }
-.post-text{
+.post-text {
   padding: 8px;
 }
 </style>

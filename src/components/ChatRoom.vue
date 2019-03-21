@@ -1,19 +1,21 @@
 <template>
-  <div class="chatbox default-border default-shadow" v-if="users">
+  <div class="chatbox default-shadow default-border" v-if="users">
     <div class="chatbox-header">
-      <h6>{{ users.join(",") }}</h6>
-      <i class="fas fa-times close-icon" @click="finishChat"></i>
+      <h6>Chat</h6>
     </div>
     <div class="chatlogs">
-
       <!--
         Using hardcoded img, replace with serverside url 
         https://github.com/vuejs-templates/webpack/issues/450
-       -->
+      -->
       <template v-for="m in messages">
         <div :key="m.id" class="chat friend" v-if="m.from !== settings.me">
           <div class="user-photo">
-            <img height="60" alt="friend avatar" :src="require(`@/assets/${friends.friends[m.from].avatar}`)">
+            <img
+              height="60"
+              alt="friend avatar"
+              :src="require(`@/assets/${friends.friends[m.from].avatar}`)"
+            >
           </div>
           <p class="chat-message secondary-bg">{{m.message}}</p>
         </div>
@@ -40,10 +42,10 @@
   flex-direction: column;
   width: 450px;
   height: 100%;
-  background: #f1f1f1;
+  background: lightgray;
   padding: 16px;
   position: fixed;
-  right: 362px;
+  right: 280px;
 }
 
 @media screen and (max-width: 1700px) {
@@ -133,7 +135,7 @@ export default {
     return {
       chat: ChatStore.state,
       settings: SettingsStore.state,
-      friends: FriendsStore.state,
+      friends: FriendsStore.state
     };
   },
   computed: {
@@ -142,7 +144,7 @@ export default {
     },
     messages: function() {
       return this.chat.messages;
-    },
+    }
   },
   methods: {
     finishChat: function() {

@@ -1,4 +1,3 @@
-
 const ChatStore = {
   debug: process.env.NODE_ENV === "development",
   state: {
@@ -6,13 +5,13 @@ const ChatStore = {
     messages: null
   },
   startChat(username) {
+    console.log("chat staretd")
     if (this.debug) {
       console.log("added to the chat", username);
     }
     if (this.state.users === null) {
       this.state.users = [username]
-    }
-    else {
+    } else {
       if (this.state.users.includes(username) === false) {
         this.state.users.push(username)
       }

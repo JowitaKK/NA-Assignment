@@ -15,6 +15,14 @@
       </div>
       <div class="form-group">
         <input 
+          type="text" 
+          placeholder="Project" 
+          required
+        >
+        <label for="Password">Password</label>    
+      </div>
+      <div class="form-group">
+        <input 
           type="password" 
           id="Password" 
           placeholder="Password" 
