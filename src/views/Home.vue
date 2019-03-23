@@ -45,7 +45,7 @@
 </style>
 
 <script>
-import ChatRoom from "../components/ChatRoom";
+// import ChatRoom from "../components/ChatRoom";
 import NewPost from "../components/NewPost";
 import NavBar from "../components/NavBar";
 import FriendList from "../components/FriendList";
@@ -55,7 +55,6 @@ import Sketchboard from "../components/Sketchboard";
 export default {
   name: "home",
   components: {
-    ChatRoom,
     NewPost,
     NavBar,
     FriendList,
