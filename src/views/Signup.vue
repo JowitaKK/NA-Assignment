@@ -1,55 +1,47 @@
 <template>
   <div class="login-wrapper">
     <div class="login-left">
-      <img height="400"  alt="application logo" src="../assets/logo.png">
+      <img height="400" alt="application logo" src="../assets/logo-min.png">
     </div>
-    <form class="login-right" v-on:submit.prevent >
+    <form class="login-right" v-on:submit.prevent>
       <h4>Signup</h4>
       <div class="form-group">
         <input type="text" id="username" placeholder="Username" v-model="username" required>
-        <label for="username">Username</label>    
+        <label for="username">Username</label>
       </div>
       <div class="form-group">
-        <input type="email" id="email" placeholder="email" v-model="Email" required>
-        <label for="username">Email Address</label>    
+        <input type="email" id="email" placeholder="Email Address" v-model="email" required>
+        <label for="username">Email Address</label>
       </div>
       <div class="form-group">
-        <input 
-          type="text" 
-          placeholder="Project" 
+        <input type="text" id="project" placeholder="Project" v-model="project" required>
+        <label for="project">Project</label>
+      </div>
+      <div class="form-group">
+        <input type="password" id="Password" placeholder="Password" v-model="password" required>
+        <label for="Password">Password</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          id="PasswordConfirmation"
+          placeholder="Password Confirmation"
+          v-model="passwordConfirmation"
           required
         >
-        <label for="Password">Password</label>    
-      </div>
-      <div class="form-group">
-        <input 
-          type="password" 
-          id="Password" 
-          placeholder="Password" 
-          v-model="password" 
-          required
-        >
-        <label for="Password">Password</label>    
-      </div>
-      <div class="form-group">
-        <input 
-          type="password" 
-          id="PasswordConfirmation" 
-          placeholder="Password Confirmation" 
-          v-model="passwordConfirmation" 
-          required
-        >
-        <label for="Password">Password</label>    
+        <label for="Password">Password</label>
       </div>
       <div class="checkbox-container">
         <input type="checkbox" v-model="agreeTerms">
         <div class="text-checkbox">Agree to term and conditions</div>
-      </div> 
-      <div class="button-area">
-        <button type="submit" class="btn btn-primary pull-right" @click="login">Login</button>
       </div>
-      <div v-if="error" class="text-error">
-        {{error.message}}
+      <div class="button-area">
+        <button type="submit" class="btn btn-primary pull-right" @click="signup">Signup</button>
+      </div>
+      <div v-if="error" class="text-error">{{error.message}}</div>
+      <div>
+        Already have account?
+        <a href="/login">Login</a>
       </div>
     </form>
   </div>
@@ -63,13 +55,14 @@ export default {
     return {
       agreeTerms: false,
       email: "",
+      project: "",
       username: "",
       password: "",
       passwordConfirmation: "",
-      error: null,
+      error: null
     };
   },
-  props: ['err'],
+  props: ["err"],
   methods: {
     isRememberMe() {
       return this.rememberMe === true;
@@ -86,13 +79,13 @@ export default {
         })
         .then(() => {
           this.$router.push({
-            name: 'home'
+            name: "home"
           });
         })
-        .catch((error) => {
+        .catch(error => {
           this.error = error;
         });
-    },
+    }
   }
 };
 </script>
@@ -115,7 +108,6 @@ input[type="password"] {
   height: 40px;
   border-bottom: 1px solid #aaaaaa;
 }
-
 
 ::-webkit-input-placeholder {
   font-size: 16px;

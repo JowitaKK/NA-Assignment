@@ -1,7 +1,8 @@
 <template>
   <nav class="navbar">
     <a href="/" class="logo">
-      <img height="40" src="../assets/logo.png" alt="warriors logo"> <h3>Warriors</h3>
+      <img height="40" src="../assets/logo-min.png" alt="warriors logo">
+      <h3>Warriors</h3>
     </a>
     <ul class="nav-links left-nav">
       <li class="nav-item" @click="toggleSketchboard()">
@@ -9,59 +10,62 @@
       </li>
     </ul>
     <ul class="nav-links right-nav">
-      <li class="nav-item primary-bg default-border-radius"><a href="/logout">Logout</a></li>
+      <li class="nav-item primary-bg default-border-radius">
+        <a href="/login">Logout</a>
+      </li>
     </ul>
   </nav>
 </template>
 
 <style>
-  .navbar {  
-    width: 100%;
-    margin-bottom: 16px;
-    background-color: #f1f1f1;
-    display: flex;
-    position: fixed;
-    align-items: center;
-  }
+.navbar {
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: #f1f1f1;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  border-bottom: 1px gray solid;
+}
 
-  .logo {
-    display: inline-block;
-  }
+.logo {
+  display: inline-block;
+}
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0px;
-  }
-  .left-nav{
-    margin-right: auto;
-  }
-  .right-nav{
-    margin-left: auto;
-  }
-  .nav-item{
-    cursor: pointer;
-  }
-  .nav-item a {
-    display: inline-block;
-    padding: 6px 14px;
-    text-decoration: none;
-    color: black;
-  }
-  .logo {
-    font-size: 24px;
-    color: black;
-  }
-  .logo:hover{
-    text-decoration: none;
-  }
-  .logo h3{
-    display: inline;
-  }
-  .logo img {
-    vertical-align: middle;
-  }
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+.left-nav {
+  margin-right: auto;
+}
+.right-nav {
+  margin-left: auto;
+}
+.nav-item {
+  cursor: pointer;
+}
+.nav-item a {
+  display: inline-block;
+  padding: 6px 14px;
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  font-size: 24px;
+  color: black;
+}
+.logo:hover {
+  text-decoration: none;
+}
+.logo h3 {
+  display: inline;
+}
+.logo img {
+  vertical-align: middle;
+}
 </style>
 
 
@@ -75,16 +79,16 @@ export default {
       privateState: {},
       sketchboard: Sketchboard.state
     };
-  }, 
+  },
   computed: {
     isSketchboardOpen: function() {
       return this.sketchboard.isOpen;
-    },
+    }
   },
   methods: {
-    toggleSketchboard: function(){
+    toggleSketchboard: function() {
       Sketchboard.toggle();
     }
   }
-}
+};
 </script>

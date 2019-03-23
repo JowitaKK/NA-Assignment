@@ -1,8 +1,8 @@
 
-const FriendsStore = {
+const UsersStore = {
   debug: process.env.NODE_ENV === "development",
   state: {
-    friends: {
+    users: {
       "Lorenzo James": {
         avatar: "lorenzo-james.png"
       }, 
@@ -13,4 +13,4 @@ const FriendsStore = {
   },
 };
 
-export default FriendsStore;
+export default UsersStore;

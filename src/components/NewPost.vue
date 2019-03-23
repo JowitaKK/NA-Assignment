@@ -19,6 +19,8 @@
 .new-post {
   min-width: 50%;
   margin-left: 3%;
+
+  margin-top: 16px;
   margin-right: auto;
 }
 @media screen and (max-width: 1200px) {

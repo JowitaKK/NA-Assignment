@@ -1,27 +1,29 @@
 <template>
   <div class="login-wrapper">
     <div class="login-left">
-      <img height="400" src="../assets/logo.png">
+      <img height="400" alt="Logo" src="../assets/logo-min.png">
     </div>
-    <form class="login-right" v-on:submit.prevent >
+    <form class="login-right" v-on:submit.prevent>
       <h4>Login</h4>
       <div class="form-group">
         <input type="text" id="username" placeholder="Username" v-model="username" required>
-        <label for="username">Username</label>    
+        <label for="username">Username</label>
       </div>
       <div class="form-group">
         <input type="password" id="Password" placeholder="Password" v-model="password" required>
-        <label for="Password">Password</label>    
+        <label for="Password">Password</label>
       </div>
       <div class="checkbox-container">
         <input type="checkbox" v-model="rememberMe">
         <div class="text-checkbox">Remember me</div>
-      </div> 
+      </div>
       <div class="button-area">
         <button type="submit" class="btn btn-primary pull-right" @click="login">Login</button>
       </div>
-      <div v-if="error" class="text-error">
-        {{error.message}}
+      <div v-if="error" class="text-error">{{error.message}}</div>
+      <div>
+        Do not have account?
+        <a href="/signup">Register</a>
       </div>
     </form>
   </div>
@@ -36,10 +38,10 @@ export default {
       rememberMe: false,
       username: "",
       password: "",
-      error: null,
+      error: null
     };
   },
-  props: ['err'],
+  props: ["err"],
   methods: {
     isRememberMe() {
       return this.rememberMe === true;
@@ -54,13 +56,13 @@ export default {
         })
         .then(() => {
           this.$router.push({
-            name: 'home'
+            name: "home"
           });
         })
-        .catch((error) => {
+        .catch(error => {
           this.error = error;
         });
-    },
+    }
   }
 };
 </script>
@@ -83,13 +85,12 @@ input[type="password"] {
   border-bottom: 1px solid #aaaaaa;
 }
 
-
 ::-webkit-input-placeholder {
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.00933333em;
 }
-.text-error{
+.text-error {
   color: red;
 }
 .form-group {
@@ -102,7 +103,6 @@ label {
   position: absolute;
   top: 0;
   opacity: 1;
-  -webkit-transform: translateY(5px);
   transform: translateY(5px);
   color: #aaa;
   font-weight: 300;
